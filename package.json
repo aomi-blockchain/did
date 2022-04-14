@@ -1,10 +1,16 @@
 {
   "name": "@aomi/one-did-provider",
-  "version": "0.0.0-Alpha.1",
-  "main": "index.js",
+  "version": "0.0.0-Alpha.2",
   "repository": "git@github.com:aomi-blockchain/did.git",
   "author": "尼古拉斯丶少 <sean.snow@live.com>",
   "license": "MIT",
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "exports": {
+    ".": "./lib/index.js"
+  },
   "scripts": {
     "build": "tsc -d",
     "watch": "tsc -d && tsc -w",
