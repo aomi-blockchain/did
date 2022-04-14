@@ -21,7 +21,7 @@ function toStableObject(obj: Record<string, any>): Record<string, any> {
   return JSON.parse(stringify(obj)) as Record<string, any>;
 }
 
-export function encodeDID(flag, publicKey: Uint8Array): string {
+export function encodeDID(flag: string, publicKey: Uint8Array): string {
   const bytes = new Uint8Array(publicKey.length + 2);
   bytes[0] = 0xed; // ed25519 multicodec
   // The multicodec is encoded as a varint so we need to add this.
@@ -49,7 +49,7 @@ interface Context {
 }
 
 const sign = async (
-  payload: Record<string, any>,
+  payload:  Record<string, any>,
   did: string,
   secretKey: Uint8Array,
   protectedHeader: Record<string, any> = {}
@@ -78,7 +78,7 @@ const didMethods: HandlerMethods<Context, DIDProviderMethods> = {
   did_createJWS: async ({ did, secretKey }, params: CreateJWSParams & { did: string }) => {
     const requestDid = params.did.split('#')[0];
     if (requestDid !== did) throw new RPCError(4100, `Unknown DID: ${did}`);
-    const jws = await sign(params.payload, did, secretKey, params.protected);
+    const jws = await sign(params.payload as any, did, secretKey, params.protected);
     return { jws: toGeneralJWS(jws) };
   },
   did_decryptJWE: async ({ secretKey }, params: DecryptJWEParams) => {

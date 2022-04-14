@@ -5,10 +5,18 @@
   "repository": "git@github.com:aomi-blockchain/did.git",
   "author": "尼古拉斯丶少 <sean.snow@live.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc -d",
+    "watch": "tsc -d && tsc -w",
+    "prepublishOnly": "yarn build"
+  },
   "dependencies": {
     "@stablelib/ed25519": "^1.0.2",
     "dids": "^2.4.3",
     "fast-json-stable-stringify": "^2.1.0",
     "rpc-utils": "^0.6.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
   }
 }
