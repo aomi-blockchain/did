@@ -5,6 +5,7 @@
   "author": "尼古拉斯丶少 <sean.snow@live.com>",
   "license": "MIT",
   "main": "./lib/index.js",
+  "type": "module",
   "directories": {
     "lib": "lib"
   },
