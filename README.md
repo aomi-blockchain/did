@@ -4,9 +4,9 @@
 
 ### Installation
 ```
-npm install @aomi-blockchain/one-did-provider
+npm install @aomi/one-did-provider
 // or
-yarn add @aomi-blockchain/one-did-provider
+yarn add @aomi/one-did-provider
 ```
 
 ### Providers
