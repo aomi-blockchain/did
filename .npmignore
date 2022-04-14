@@ -1,3 +1,10 @@
 coverage/
 tmp/
 example/
+
+src
+tsconfig.json
+
+.editorconfig
+.eslintrc.js
+.gitignore
