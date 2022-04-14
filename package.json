@@ -1,5 +1,5 @@
 {
-  "name": "@aomi-blockchain/one-did-provider",
+  "name": "@aomi/one-did-provider",
   "version": "0.0.0-Alpha.1",
   "main": "index.js",
   "repository": "git@github.com:aomi-blockchain/did.git",

@@ -16,7 +16,7 @@ yarn add @aomi-blockchain/one-did-provider
 基于`OneEd25519Provider`封装的DID。
 
 ```typescript
-import { OneEd25519Provider } from '@aomi-blockchain/one-did-provider'
+import { OneEd25519Provider } from '@aomi/one-did-provider'
 import KeyResolver from 'key-did-resolver'
 import { DID } from 'dids'
 
