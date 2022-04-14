@@ -15,6 +15,15 @@ yarn add @aomi-blockchain/one-did-provider
 
 基于`OneEd25519Provider`封装的DID。
 
+原ED25519 DID 结构
+```
+did:key:z${base58(publicKey)}
+```
+One ED25519 DID 结构
+```
+did:one:${base64(flag)}.z${base58(publicKey)}
+```
+
 ```typescript
 import { OneEd25519Provider } from '@aomi/one-did-provider'
 import KeyResolver from 'key-did-resolver'
